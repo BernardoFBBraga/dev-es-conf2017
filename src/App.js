@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
+import Boxes from './Boxes';
+import Loading from './Loading';
 import Avatar from './Avatar';
 import logo from './logo.svg';
 import './App.css';
+
+import Perf from 'react-addons-perf';
+window.Perf = Perf;
 
 class App extends Component {
   render() {
@@ -16,7 +21,14 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Clock date={this.props.date}/>
-        <Avatar picture="https://graph.facebook.com/761497832/picture?type=large"/>
+        <Loading date={this.props.date}/>
+        <Avatar 
+          picture="https://placeimg.com/90/60/animals"
+          date={this.props.date.toDateString()}
+        />
+        <Boxes
+          count={parseInt(this.props.date.getSeconds()/6,10)}
+        />
       </div>
     );
   }
