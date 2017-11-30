@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+//1- Use  _.memoize do Lodash para criar uma função no constructor que vai cachear o style e retornar o mesmo objeto enquanto size não mudar
 
 class Box extends Component {
   render() {
@@ -8,7 +8,6 @@ class Box extends Component {
     return (
       <div
         style={this.props.style}
-        onClick={this.props.onClick}
       >
         <Box
           count={this.props.count-1}
@@ -17,11 +16,6 @@ class Box extends Component {
               width:size,
               height:size,
               backgroundColor:"rgb("+size+","+(256-size)+","+size+")",
-            }
-          }
-          onClick={
-            (e)=>{
-              console.log(e);
             }
           }
         />

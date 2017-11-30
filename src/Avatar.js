@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+//1 - experimente mudar Component para PureComponent
+//2 - experimente trazer o objeto date em vez de uma string como props. Veja que o PureComponent não funciona mais por que o objeto muda a cada vez
 
 class Avatar extends Component {
   render() {
