@@ -7,7 +7,9 @@
     "react-dom": "15.5.4",
     "react-scripts": "1.0.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react-addons-perf": "^15.4.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
